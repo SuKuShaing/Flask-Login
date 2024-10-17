@@ -1,7 +1,10 @@
 from flask import Flask, render_template, request, redirect, url_for
+from flask_mysqldb import MySQL
+
 from config import config # Importa el diccionario de configuraciones
 
 app = Flask(__name__)
+db = MySQL(app) # Inicializa la conexión a la base de datos
 
 @app.route('/')
 def index():
