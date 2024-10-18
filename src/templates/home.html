@@ -8,6 +8,7 @@ Home
 
 {% block body %}
 <h1>Bienvenido, {{ current_user.fullname }}</h1>
+<!-- Current_user.fullname es extraido del login_user cuando el usuario cargó sesión -->
 
 <a href="{{ url_for('logout') }}" class="btn btn-secondary">Logout</a>
 {% endblock %}

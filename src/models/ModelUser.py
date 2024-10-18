@@ -19,6 +19,7 @@ class ModelUser():
 
         except Exception as ex:
             raise Exception(ex)
+
     
     @classmethod
     def get_by_id(self, db, id):

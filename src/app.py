@@ -19,6 +19,7 @@ login_manager_app = LoginManager(
 )  # le pasamos la aplicación al manejador de sesiones
 
 
+# login_user busca los datos datos del usuario aquí
 @login_manager_app.user_loader # método que hay que crear para obtener todos los datos de un usuario que creado un sesión
 def load_user(id):
     return ModelUser.get_by_id(db, id) # se le pasan la variable de conexión y un identificador
